@@ -6,10 +6,12 @@ namespace Leopard.Models
     public class Article : INotifyPropertyChanged
     {
         private Guid _id;
-        private string _name;
+        private string _generatedUrl;
+        private string _title;
+        private string _content;
         private string _description;
         private string _imageUrl;
-        private bool _isStarted;
+        private bool _isPublished;
 
         public Guid Id
         {
@@ -21,13 +23,33 @@ namespace Leopard.Models
             }
         }
 
-        public string Name
+        public string GeneratedUrl
         {
-            get => _name;
+            get => _generatedUrl;
             set
             {
-                _name = value;
-                OnPropertyChanged(nameof(Name));
+                _generatedUrl = value;
+                OnPropertyChanged(nameof(GeneratedUrl));
+            }
+        }
+
+        public string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
+                OnPropertyChanged(nameof(Title));
+            }
+        }
+
+        public string Content
+        {
+            get => _content;
+            set
+            {
+                _content = value;
+                OnPropertyChanged(nameof(Content));
             }
         }
 
@@ -41,6 +63,7 @@ namespace Leopard.Models
             }
         }
 
+     
         public string ImageUrl
         {
             get => _imageUrl;
@@ -51,13 +74,13 @@ namespace Leopard.Models
             }
         }
 
-        public bool IsStarted
+        public bool IsPublished
         {
-            get => _isStarted;
+            get => _isPublished;
             set
             {
-                _isStarted = value;
-                OnPropertyChanged(nameof(IsStarted));
+                _isPublished = value;
+                OnPropertyChanged(nameof(IsPublished));
             }
         }
 

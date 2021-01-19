@@ -9,41 +9,41 @@ namespace Leopard.Models
         static ShowRepository()
         {
             if (Shows != null) return;
-            Shows = new List<Show>
+            Shows = new List<Article>
             {
-                new Show
+                new Article
                 {
                     Id = Guid.Parse("{459d0316-355f-445c-8cc7-746dc9ceabf1}"),
-                    Name = "Show 1",
+                    Title = "Show 1",
                     Description = "Show 1 Description",
-                    IsFinished = false
+                    IsPublished = false
                 },
-                new Show
+                new Article
                 {
                     Id = Guid.Parse("{459d0316-355f-445c-8cc7-746dc9ceabf2}"),
-                    Name = "show 2",
+                    Title = "show 2",
                     Description = "show 2 Description",
-                    IsFinished = false
+                    IsPublished = false
                 },
                 
             };
         }
 
-        public static List<Show> Shows { get; set; }
+        public static List<Article> Shows { get; set; }
 
-        public static void AddShow(Show entity)
+        public static void AddShow(Article entity)
         {
             entity.Id = Guid.NewGuid();            
             Shows.Add(entity);
         }
 
-        public static void UpdateShow(Show entity)
+        public static void UpdateShow(Article entity)
         {
             var old = Shows.Where(e => e.Id == entity.Id).FirstOrDefault();
-            old.Name = entity.Name;
+            old.Name = entity.Title;
             old.Description = entity.Description;
             old.ImageUrl = entity.ImageUrl;
-            old.IsFinished = entity.IsFinished;
+            old.IsFinished = entity.IsPublished;
 
         }
     }

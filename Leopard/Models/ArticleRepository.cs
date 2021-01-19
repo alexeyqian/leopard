@@ -8,42 +8,44 @@ namespace Leopard.Models
     {
         static ArticleRepository()
         {
-            if (Shows != null) return;
-            Shows = new List<Show>
+            if (Articles != null) return;
+            Articles = new List<Article>
             {
-                new Show
+                new Article
                 {
                     Id = Guid.Parse("{459d0316-355f-445c-8cc7-746dc9ceabf1}"),
-                    Name = "Show 1",
-                    Description = "Show 1 Description",
-                    IsFinished = false
+                    Title = "article 1",
+                    Description = "article 1 Description",
+                    IsPublished = false
                 },
-                new Show
+                new Article
                 {
                     Id = Guid.Parse("{459d0316-355f-445c-8cc7-746dc9ceabf2}"),
-                    Name = "show 2",
-                    Description = "show 2 Description",
-                    IsFinished = false
+                    Title = "article 2",
+                    Description = "article 2 Description",
+                    IsPublished = false
                 },
 
             };
         }
 
-        public static List<Show> Shows { get; set; }
+        public static List<Article> Articles { get; set; }
 
-        public static void AddShow(Show entity)
+        public static void AddArticle(Article entity)
         {
             entity.Id = Guid.NewGuid();
-            Shows.Add(entity);
+            // entity.GeneratedUrl = GenerateUrl(title);
+            Articles.Add(entity);
         }
 
-        public static void UpdateShow(Show entity)
+        public static void UpdateShow(Article entity)
         {
-            var old = Shows.Where(e => e.Id == entity.Id).FirstOrDefault();
-            old.Name = entity.Name;
+            var old = Articles.Where(e => e.Id == entity.Id).FirstOrDefault();
+            old.Title = entity.Title;
             old.Description = entity.Description;
+            old.Content = entity.Content;
             old.ImageUrl = entity.ImageUrl;
-            old.IsFinished = entity.IsFinished;
+            old.IsPublished = entity.IsPublished;
 
         }
     }
