@@ -35,11 +35,10 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            
+                        <Grid.ColumnDefinitions>                            
+                            <ColumnDefinition Width="*"></ColumnDefinition>                            
                         </Grid.ColumnDefinitions>
+
                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}"  Margin="3" FontAttributes="Bold"></Label>
                         <Label Grid.Row="1" Grid.Column="0" Text="{Binding Description}"  Margin="3"></Label>
                     </Grid>
@@ -49,6 +48,5 @@
        
     </ListView>
     </Grid>
-
     
 </ContentPage>
