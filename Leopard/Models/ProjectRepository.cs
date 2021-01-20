@@ -46,13 +46,13 @@ namespace Leopard.Models
 
         public static List<Project> Projects { get; set; }
 
-        public static void AddProject(Project entity)
+        public static void Add(Project entity)
         {
             entity.Id = Guid.NewGuid();            
             Projects.Add(entity);
         }
 
-        public static void UpdateProject(Project entity)
+        public static void Update(Project entity)
         {
             var old = Projects.Where(e => e.Id == entity.Id).FirstOrDefault();
             old.Name = entity.Name;

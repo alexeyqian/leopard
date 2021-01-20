@@ -17,5 +17,10 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Services\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

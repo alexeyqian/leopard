@@ -31,14 +31,14 @@ namespace Leopard.Models
 
         public static List<Article> Articles { get; set; }
 
-        public static void AddArticle(Article entity)
+        public static void Add(Article entity)
         {
             entity.Id = Guid.NewGuid();
             // entity.GeneratedUrl = GenerateUrl(title);
             Articles.Add(entity);
         }
 
-        public static void UpdateShow(Article entity)
+        public static void Update(Article entity)
         {
             var old = Articles.Where(e => e.Id == entity.Id).FirstOrDefault();
             old.Title = entity.Title;
