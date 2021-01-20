@@ -19,8 +19,8 @@ namespace Leopard
             NavigationService.Configure(ViewNames.ProjectListView, typeof(ProjectListView));
             NavigationService.Configure(ViewNames.ProjectDetailView, typeof(ProjectDetailView));
 
-            //MainPage = new NavigationPage(new ProjectListView()); //new MainPage();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ProjectListView()); 
+            //MainPage = new MainPage();
         }
 
         protected override void OnStart()
