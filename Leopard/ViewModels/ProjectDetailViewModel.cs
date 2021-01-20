@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Office.Models;
-using Office.Services;
-using Office.Utility;
+using Leopard.Models;
+using Leopard.Services;
+using Leopard.Utility;
 using Xamarin.Forms;
 
-namespace Office.ViewModels
+namespace Leopard.ViewModels
 {
     public class ProjectDetailViewModel : BaseViewModel
     {
