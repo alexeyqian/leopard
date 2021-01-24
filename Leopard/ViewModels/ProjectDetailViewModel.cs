@@ -46,7 +46,7 @@ namespace Leopard.ViewModels
             _navigationService.GoBack();
         }
 
-        public override void Initialize(object parameter)
+        public override void InitializeAsync(object parameter)
         {
             if (parameter == null)
                 SelectedProject = new Project();

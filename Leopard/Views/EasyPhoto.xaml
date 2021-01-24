@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Leopard.Views.CardCam"
-             Title="Camera">
+             x:Class="Leopard.Views.EasyPhoto"
+             Title="Easy Photo">
     <ContentPage.Content>
-        <Grid x:Name="CameraGrid">
+         <Grid x:Name="CameraGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>                    
@@ -14,8 +14,8 @@
                <Image x:Name="imgCamera" Grid.Row="0" Grid.Column="0"></Image>
                
 
-                <Button x:Name="btnTakePhoto"
-                        Command="{Binding TakePhotoCommand}"
+                <Button x:Name="btnTakePhoto" 
+                        Clicked="btnTakePhoto_Clicked"
                         Text="Save"
                         Grid.Row="1"
                         Grid.Column="0"></Button>

@@ -12,7 +12,7 @@ namespace Leopard.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public virtual void Initialize(object parameter)
+        public virtual void InitializeAsync(object parameter)
         {
 
         }

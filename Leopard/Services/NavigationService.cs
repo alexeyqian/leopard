@@ -23,7 +23,7 @@ namespace Leopard.Services
                 var page = (Page)Activator.CreateInstance(pageType);
                 page.SetNavigationArgs(parameter);
                 MainPage.Navigation.PushAsync(page);
-                (page.BindingContext as BaseViewModel).Initialize(parameter);
+                (page.BindingContext as BaseViewModel).InitializeAsync(parameter);
             }else
             {
                 throw new ArgumentException($"Page doesn't exist: {pageKey}", nameof(pageKey));
