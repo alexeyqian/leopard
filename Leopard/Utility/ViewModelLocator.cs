@@ -7,5 +7,6 @@ namespace Leopard.Utility
     {
         public static ProjectListViewModel ProjectListViewModel { get; set; } = new ProjectListViewModel(App.ProjectDataService, App.NavigationService);
         public static ProjectDetailViewModel ProjectDetailViewModel { get; set; } = new ProjectDetailViewModel(App.ProjectDataService, App.NavigationService);
+        public static CardCameraViewModel CardCameraViewModel { get; set; } = new CardCameraViewModel(App.NavigationService);
     }
 }

@@ -10,6 +10,7 @@ namespace Leopard.Models
         private string _description;
         private string _imageUrl;
         private bool _isStarted;
+        //private double _budget;
 
         public Guid Id
         {
@@ -60,7 +61,17 @@ namespace Leopard.Models
                 OnPropertyChanged(nameof(IsStarted));
             }
         }
-
+        /*
+        public double Budget
+        {
+            get => _budget;
+            set
+            {
+                _budget = value;
+                OnPropertyChanged(nameof(Budget));
+            }
+        }
+        */
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
